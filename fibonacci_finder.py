@@ -27,8 +27,8 @@ def get_index(index):
 			fib_list.append(fibonacci(i))	
 
 		ordinal = p.ordinal(index)
-		result = fib_list[-1]
-		return "The %s number in the sequence is %d." % (ordinal, result)
+		result = '{:,}'.format(fib_list[-1])
+		return "The %s number in the sequence is %s." % (ordinal, result)
 	except (TypeError, IndexError, ValueError, RuntimeError):
 		print "Your input was not valid. Please enter a positive integer."
 		index = raw_input("> ")
